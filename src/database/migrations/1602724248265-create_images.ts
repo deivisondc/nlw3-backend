@@ -1,7 +1,6 @@
-import { query } from "express";
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class craeteImages1602720274147 implements MigrationInterface {
+export class createImages1602724248265 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(new Table({
       name: 'images',
@@ -37,7 +36,7 @@ export class craeteImages1602720274147 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('images');
+    await queryRunner.dropTable('images')
   }
 
 }
